@@ -9,7 +9,7 @@ public class FirstScript {
 		 * First we need to register the web driver we'll be using to run our browser.
 		 * We set the property for the Chrome driver we're using to the actual executable we're using.
 		 * "chromedriver" is the Mac web driver I'm using.  For windows, copy your 
-		 * chromedriver.exe into the project folder and change the below to "chromedirver.exe"
+		 * chromedriver.exe into the project folder and change the below to "chromedriver.exe"
 		 */
 		System.setProperty("webdriver.chrome.driver","chromedriver");
 		
