@@ -81,5 +81,20 @@ class SeleniumTests {
 		
 		assertEquals(expected, actual);
 	}
+	
+	@Test
+	void test4() {
+		email.sendKeys("Boxer29");
+		email.sendKeys(Keys.TAB); // move to password
+		driver.switchTo().activeElement().sendKeys("l33tpword");
+		driver.switchTo().activeElement().sendKeys(Keys.TAB); // move to lost password
+		driver.switchTo().activeElement().sendKeys(Keys.TAB); // move to submit button
+		driver.switchTo().activeElement().sendKeys(" "); //tap space bar
+		
+		String expected = "Successfully Logged in...";
+		String actual = driver.findElement(By.xpath("/html/body/div[2]/div/div/h3")).getText();
+		
+		assertEquals(expected, actual);
+	}
 
 }
