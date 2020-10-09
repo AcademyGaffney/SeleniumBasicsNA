@@ -1,4 +1,4 @@
-package Session2;
+package session2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;

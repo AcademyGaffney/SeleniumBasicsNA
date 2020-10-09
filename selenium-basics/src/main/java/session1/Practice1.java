@@ -1,4 +1,4 @@
-package Session1;
+package session1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

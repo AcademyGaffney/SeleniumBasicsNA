@@ -1,4 +1,4 @@
-package Session2;
+package session2;
 import java.util.List;
 
 import org.openqa.selenium.By;
