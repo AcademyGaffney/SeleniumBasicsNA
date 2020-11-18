@@ -45,7 +45,18 @@ public class BasicLocators {
 		System.out.println(text.getText().contains("Yes"));
 		System.out.println(text.getText());
 		
-		
+		/*
+		 * As we can see in the test page's HTML, the reset button doesn't have an ID or other property
+		 * we can find by, so we need to use its xpath.
+		 * The xpath is the most general purpose way of finding an element on a web page. It consists of a 
+		 * complete drill-down of HTML tags to the particular tag one is looking for.  So in this case, it's
+		 * telling findElement to grab the first input tag inside the second paragraph tag inside 
+		 * the form tag inside the second div tag inside the body tag inside the html tag. (whew)
+		 * 
+		 * Fortunately, you never have to do that by hand unless someone hands you a print out of HTML.
+		 * For testing purposes, it *should* be part of the specification. It can also be found very easily in
+		 * the browser's inspector, as we'll see.
+		 */
 		driver.findElement(By.xpath("/html/body/div[2]/form/p[2]/input[1]")).click();
 		System.out.println(yesButton.isSelected());
 		
