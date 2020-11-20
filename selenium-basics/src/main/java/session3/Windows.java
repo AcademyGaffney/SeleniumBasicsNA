@@ -63,7 +63,14 @@ public class Windows {
 		driver.switchTo().window(popup);
 		Thread.sleep(1000);
 		driver.findElement(By.name("btnLogin")).click();
+		
+		driver.close(); //closes the current window
+		Thread.sleep(2000);
+		
+		//We're now pointed to the orphan window, so we need to switch back
+		driver.switchTo().window(main);
 
+		driver.quit(); //closes the session.
 	}
 
 }
